@@ -1,0 +1,13 @@
+<h1>This is home</h1>
+{% include 'main.html'%}
+
+
+{%  for room in rooms  %}
+
+<ul>
+    {{ room.id }} )
+    <a href = " {% url 'room' room.id %}"> {{ room.name }} </a>
+    {{ room.discription }}
+</ul>
+
+{% endfor %}

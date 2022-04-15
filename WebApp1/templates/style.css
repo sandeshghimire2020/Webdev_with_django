@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Permanent+Marker&family=Shizuru&display=swap');
+
+
+
+#header{
+    height: 60px;
+    
+    color: rgba(255, 245, 203, 0.74);
+}
+/*.main{
+    background-attachment:scroll;
+    background-image: url("../Photos/N2.jpeg");
+    
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+}*/
+html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
+ 
+
+
+/*--------------------------------NavBar-----------------------------*/
+
+#sec1{
+    padding-top:0px;
+}
+
+.logo{
+    font-family: 'Arvo', serif;
+    float:left;
+    max-height: 40%;
+    max-width: 40%;
+    font-size: 30px;
+    padding-left:30px;
+
+}
+.div1{
+    float:right;
+    max-height: 50%;
+    max-width: 50%;
+
+}
+
+.navbar {
+    color: red;
+    
+    
+}
+
+
+.navbar li {
+   
+    display:inline-table;
+    height: 50px;
+    line-height: 45px;
+    font-size: 18px;
+    width: 10%;
+}
+
+
+.logo a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight:bold;
+    float:left;
+}
+
+.navbar a {
+    text-decoration: none;
+    
+    font-family: 'Arvo', serif;
+    display: block;
+    font-size: 1pc;
+    font-weight:normal;
+    
+
+}
+
+.navbar a:link{
+    color: rgb(0, 0, 0);
+    
+    
+}
+.navbar a:active{
+    text-decoration: underline;
+    text-decoration-color: black ;
+    text-decoration-thickness: 3px;
+
+}
+
+
+.navbar a:hover {
+    
+    
+    height:50px;
+    text-decoration: underline;
+    text-underline-position: under;
+    color: rgba(0, 0, 0, 0.651);
+    text-decoration-thickness: 2px;
+    
+    
+    
+}
+
+
+.navbar ul {
+    
+    float:right;
+    list-style: none;
+    padding-right:60px;
+    margin: 0;
+    min-height: auto;
+    min-width: auto;
+    word-spacing: 10px;
+   
+    
+}
+.clearfix{
+    clear:both;
+}
+/*--------------------------------END-NavBar-----------------------------*/
+
