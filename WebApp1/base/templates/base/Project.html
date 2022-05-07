@@ -1,0 +1,23 @@
+<h1>This is project</h1>
+
+
+{% include 'main.html'%}
+
+
+
+
+<h1> {{ cont.title }} <br>
+    {{ cont.description }}</h1>
+
+    <p>
+        Here are the tags for {{cont.title}} :
+
+        {% for i in cont.tags.all %}
+
+            <span style="border: 1px solid black" > {{ i }} </span>
+
+        {% endfor %}
+    </p>
+
+
+

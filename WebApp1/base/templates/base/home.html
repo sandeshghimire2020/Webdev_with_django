@@ -1,13 +1,40 @@
 <h1>This is home</h1>
-{% include 'main.html'%}
 
 
-{%  for room in rooms  %}
 
-<ul>
-    {{ room.id }} )
-    <a href = " {% url 'room' room.id %}"> {{ room.name }} </a>
-    {{ room.discription }}
-</ul>
 
-{% endfor %}
+
+<table>
+  <tr>
+    <th> ID </th>
+    <th> PROJECT </th>
+    <th> VOTES </th>
+    <th> POSITIVE VOTE </th>
+    <th> CREATED </th>
+    <th> </th>
+  </tr>
+
+  {%  for Project in Projects  %}
+  <tr>
+    
+
+    <td> {{ Project.id }} </td>
+    <td> {{ Project.title }} </td>
+    <td> {{ Project.vote_total }} </td>
+    <td> {{ Project.vote_ratio }}% </td>
+    <td> {{ Project.created }} </td>
+    <td><a href = " {% url 'Project' Project.id %}"> View </a></td>
+
+   
+
+  </tr>
+  {% endfor %}
+
+</table>
+
+
+
+
+
+
+
