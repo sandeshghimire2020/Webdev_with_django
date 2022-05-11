@@ -29,17 +29,25 @@ html,body {
     padding-top:0px;
 }
 
+
+
 .logo{
-    font-family: 'Arvo', serif;
+    
     float:left;
     max-height: 40%;
     max-width: 40%;
-    font-size: 30px;
+   
     padding-left:30px;
 
 }
+.logo img{
+    height:30%;
+    width:35%;
+}
+
 .div1{
     float:right;
+    
     max-height: 50%;
     max-width: 50%;
 
@@ -47,7 +55,6 @@ html,body {
 
 .navbar {
     color: red;
-    
     
 }
 
@@ -62,12 +69,7 @@ html,body {
 }
 
 
-.logo a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight:bold;
-    float:left;
-}
+
 
 .navbar a {
     text-decoration: none;
@@ -112,15 +114,14 @@ html,body {
     float:right;
     list-style: none;
     padding-right:60px;
+    padding-top:20px;
     margin: 0;
     min-height: auto;
     min-width: auto;
     word-spacing: 10px;
-   
     
 }
 .clearfix{
     clear:both;
 }
 /*--------------------------------END-NavBar-----------------------------*/
-

@@ -1,4 +1,55 @@
+<!DOCTYPE html>
 
-<h1>LOGO</h1>
-<a href = "{% url 'create' %}">Add Project</a>
-<hr>
+{% load static %}
+
+<html >
+<meta name="description" content="Na">
+<meta name="Author" content="Sandesh Ghimire">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no ">
+
+<head>
+<title>Sandesh Ghimire</title>
+<link rel="stylesheet" type= 'text/css' media = 'screen' href='{% static "Style/style.css" %}'>
+    
+
+</head>
+
+<body id= "Back" class="main">
+    
+    
+
+
+    
+    <div class="back2">
+    
+
+        <section id="sec1">
+
+            <div class="logo">
+
+                <a href = "#"><img src = " {% static 'images/logo.png' %} "></a>
+
+            </div>
+            <div id="div1" >
+                
+                <div id="header" class="navbar">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+     
+
+
+            </div>
+            <div class="clearfix"></div>   
+   
+        </section>
+       
+
+</body>
+
+
+</html>
