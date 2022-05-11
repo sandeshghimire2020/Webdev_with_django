@@ -8,6 +8,7 @@
     <th> POSITIVE VOTE </th>
     <th> CREATED </th>
     <th> </th>
+    <th> </th>
   </tr>
 
   {%  for Project in Projects  %}
@@ -19,7 +20,9 @@
     <td> {{ Project.vote_total }} </td>
     <td> {{ Project.vote_ratio }}% </td>
     <td> {{ Project.created }} </td>
+    <td><a href = " {% url 'update' Project.id %}"> Edit </a></td>
     <td><a href = " {% url 'Project' Project.id %}"> View </a></td>
+    <td><a href = " {% url 'delete' Project.id %}"> Delete </a></td>
 
    
 
