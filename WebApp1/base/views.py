@@ -30,12 +30,12 @@ def updateProject(request, pk):
     editProject = Project.objects.get(id=pk) #we are taking pk of the project where user clicked edit
     forms = ProjectForm(instance = editProject) #sending the instance that we got to the form
     if request.method =='POST':
-        forms = ProjectForm(request.POST)
+        forms = ProjectForm(request.POST, instance = editProject)
         if forms.is_valid():
             forms.save()
             return redirect('home')
     Context={'form':forms}
-    return render(request,'base/project_form.html',Context )
+    return render(request,'base/project_form.html',Context)
 
 def deleteProject (request, pk):
     deleteProject = Project.objects.get(id=pk)

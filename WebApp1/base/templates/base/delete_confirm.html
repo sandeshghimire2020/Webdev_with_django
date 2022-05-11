@@ -1,13 +1,14 @@
-{% extends 'main.html' %}
+{% include 'main.html' %}
 
 {% block content %}
 
 <form method='POST'>
 
     {% csrf_token %}
-    <p> Are you sure you want to delete {{object}} </p>
-    
-    <a href = "{% url = 'home' %}"> Cancel </a>
+
+    <p> Are you sure you want to delete {{delete}} </p>
+
+    <a href = "{% url 'home' %}"> Cancel</a>
 
     <input type = "submit" value = "Confirm" />
 
@@ -15,4 +16,4 @@
 
 
 
-{% end block %}
+{% endblock %}
