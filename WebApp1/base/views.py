@@ -17,25 +17,25 @@ def project(request,pk):
     return render(request,'base/Project.html',{'cont':ProjectObj})
 
 def createProject(request):
-    forms = ProjectForm()
+    form = ProjectForm()
     if request.method =='POST':
-        forms = ProjectForm(request.POST)
-        if forms.is_valid():
-            forms.save()
+        form = ProjectForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
             return redirect('home')
-    Context={'form':forms}
-    return render(request,'base/project_form.html',Context )
+    Context={'form':form}
+    return render(request,"base/project_form.html",Context )
 
 def updateProject(request, pk):
     editProject = Project.objects.get(id=pk) #we are taking pk of the project where user clicked edit
     forms = ProjectForm(instance = editProject) #sending the instance that we got to the form
     if request.method =='POST':
-        forms = ProjectForm(request.POST, instance = editProject)
+        forms = ProjectForm(request.POST,request.FILES, instance = editProject)
         if forms.is_valid():
             forms.save()
             return redirect('home')
     Context={'form':forms}
-    return render(request,'base/project_form.html',Context)
+    return render(request,"base/project_form.html",Context)
 
 def deleteProject (request, pk):
     deleteProject = Project.objects.get(id=pk)
@@ -43,4 +43,4 @@ def deleteProject (request, pk):
         deleteProject.delete()
         return redirect('home')
     context = {'delete':deleteProject}
-    return render (request, 'base/delete_confirm.html',context)
+    return render (request, "base/delete_confirm.html",context)

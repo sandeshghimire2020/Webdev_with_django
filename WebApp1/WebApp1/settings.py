@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-epmu0mz*_7lty__8k$w1r*2helne)0sc(=28#774=@utg+&zhz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -130,6 +130,7 @@ STATICFILE_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/Images')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key field type
