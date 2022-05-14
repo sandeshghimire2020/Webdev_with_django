@@ -2,54 +2,27 @@
 
 {% load static %}
 
-<html >
-<meta name="description" content="Na">
-<meta name="Author" content="Sandesh Ghimire">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no ">
-
-<head>
-<title>Sandesh Ghimire</title>
-<link rel="stylesheet" type= 'text/css' media = 'screen' href='{% static "Style/style.css" %}'>
-    
-
-</head>
-
-<body id= "Back" class="main">
-    
-    
-
-
-    
-    <div class="back2">
-    
-
-        <section id="sec1">
-
-            <div class="logo">
-
-                <a href = "#"><img src = " {% static 'images/logo.png' %} "></a>
-
-            </div>
-            <div id="div1" >
-                
-                <div id="header" class="navbar">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Skills</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-     
-
-
-            </div>
-            <div class="clearfix"></div>   
-   
-        </section>
-       
-
-</body>
-
-
-</html>
+<!-- Header Section -->
+<header class="header">
+    <div class="container container--narrow">
+      <a href="{% url 'home' %}" class="header__logo">
+        <img src="{% static 'Images/logo.svg' %}" alt="DevSearch Logo" />
+      </a>
+      <nav class="header__nav">
+        <input type="checkbox" id="responsive-menu" />
+        <label for="responsive-menu" class="toggle-menu">
+          <span>Menu</span>
+          <div class="toggle-menu__lines"></div>
+        </label>
+        <ul class="header__menu">
+          <li class="header__menuItem"><a href="#">Developers</a></li>
+          <li class="header__menuItem"><a href="#">Projects</a></li>
+          <li class="header__menuItem"><a href="{% url 'create' %}">Add Project</a></li>
+          <li class="header__menuItem"><a href="#">My Account</a></li>
+          
+          <li class="header__menuItem"><a href="#" class="btn btn--sub">Login/Sign Up</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
