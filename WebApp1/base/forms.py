@@ -7,7 +7,7 @@ from django import forms
 class ProjectForm(ModelForm):
     class Meta:
         model = Project
-        fields = ['title', 'userName', 'user_image','description',  'demo_link','source_link','tags']
+        fields = ['title', 'owner', 'user_image','description',  'demo_link','source_link','tags']
         widgets= {
             'tags' : forms.CheckboxSelectMultiple(), 
         }

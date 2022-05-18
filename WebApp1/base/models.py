@@ -1,12 +1,13 @@
 from django.db import models
 import uuid
+from users.models import Profile
 
 
 #Classes like ROom topic and message
 
 class Project(models.Model):
+    owner= models.ForeignKey(Profile, null=True, blank=True, on_delete=models.SET_NULL)
     title=models.CharField(max_length=200)
-    userName = models.CharField(max_length=200, null = False, blank= False, default="Anonymous user")
     description = models.TextField(null = True, blank=True)
     demo_link =models.CharField(max_length=2000, null=True,blank=True)
     user_image = models.ImageField(null=True, blank = True, default = "default.png")

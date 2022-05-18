@@ -39,7 +39,7 @@
               <img class="project__thumbnail" src={{ Project.user_image.url }} alt="project thumbnail" />
               <div class="card__body">
                 <h3 class="project__title"> {{ Project.title }} </h3>
-                <p><a class="project__author" href={% url 'Project' Project.id %}>By {{ Project.userName }}</a></p>
+                <p><a class="project__author" href={% url 'Project' Project.id %}>By {{ Project.owner }}</a></p>
                 <p class="project--rating">
 
                   <span style="font-weight: bold;">{{ Project.vote_ratio }}%</span> Postitive
