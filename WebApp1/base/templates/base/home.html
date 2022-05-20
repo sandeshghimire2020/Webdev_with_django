@@ -35,7 +35,7 @@
 
         <div class="column">
           <div class="card project">
-            <a href={% url 'Project' Project.id %} class="project">
+            <a href="{% url 'Project' Project.id %}" class="project">
               <img class="project__thumbnail" src={{ Project.user_image.url }} alt="project thumbnail" />
               <div class="card__body">
                 <h3 class="project__title"> {{ Project.title }} </h3>
