@@ -6,9 +6,10 @@ from .forms import ProjectForm
 
 
 
-Projects = Project.objects.all();
+##Projects = Project.objects.all();
 
 def home(request):
+    Projects = Project.objects.all()
     return render(request,'base/home.html', {'Projects':Projects})
 
 def project(request,pk):
