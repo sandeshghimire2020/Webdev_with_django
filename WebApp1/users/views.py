@@ -53,7 +53,7 @@ def loginUser(request):
 
 def logoutUser(request):
     logout(request) #delete the session
-    messages.error(request,"User was logged out!")
+    messages.success(request,"User was logged out!")
     return redirect('login')
 
 
