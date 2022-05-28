@@ -74,3 +74,11 @@ def registerUser(request):
 
     context={'page':page,'form':form}
     return render(request,'users/login_register.html', context)
+
+@login_required(login_url='login')
+def userAccount(request):
+    profile = request.user.profile
+    Skills = profile.skill_set.all()
+    projects=profile.project_set.all()
+    context={'profile':profile,'Skills':Skills,'projects':projects}
+    return render(request, 'users/account.html',context)

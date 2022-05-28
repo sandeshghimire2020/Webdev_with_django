@@ -23,7 +23,7 @@
             <div class="card__body dev">
               <img class="avatar avatar--xl" src="{{ userProfile.profile_image.url }}" />
               <h2 class="dev__name">{{ userProfile.name }}</h2>
-              <p class="dev__title">Expirance FullStack Developer</p>
+              <p class="dev__title">{{userProfile.short_intro}}</p>
               <p class="dev__location">Based in {{ userProfile.location }}</p>
               <ul class="dev__social">
                 <li>
