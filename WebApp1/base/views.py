@@ -20,18 +20,22 @@ def project(request,pk):
 
 @login_required(login_url="login")
 def createProject(request):
+    profile = request.user.profile
     form = ProjectForm()
     if request.method =='POST':
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            project = form.save(commit=False)
+            project.owner=profile
+            project.save()
             return redirect('home')
     Context={'form':form}
     return render(request,"base/project_form.html",Context )
 
 @login_required(login_url="login")
 def updateProject(request, pk):
-    editProject = Project.objects.get(id=pk) #we are taking pk of the project where user clicked edit
+    profile = request.user.profile
+    editProject = profile.project_set.get(id=pk) #we are taking pk of the project where user clicked edit
     forms = ProjectForm(instance = editProject) #sending the instance that we got to the form
     if request.method =='POST':
         forms = ProjectForm(request.POST,request.FILES, instance = editProject)
@@ -43,7 +47,8 @@ def updateProject(request, pk):
 
 @login_required(login_url="login")
 def deleteProject (request, pk):
-    deleteProject = Project.objects.get(id=pk)
+    profile = request.user.profile
+    deleteProject =profile.project_set.get(id=pk)
     if request.method == 'POST':
         deleteProject.delete()
         return redirect('home')
