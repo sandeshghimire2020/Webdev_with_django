@@ -19,10 +19,14 @@ A user can signup or log in. A user can have multiple projects.
 
 
 
-The front-end templates are used from a course by Dannis Ivy. This project still needs some parts to finish. I am still working on them. 
+The front-end templates are used from a course by Dannis Ivy. 
 
 <img width="1439" alt="Screen Shot 2022-05-17 at 4 42 17 PM" src="https://user-images.githubusercontent.com/40518788/168915212-bc8483e0-109c-4147-b135-7ea74c619a1b.png">
 <img width="1439" alt="Screen Shot 2022-05-17 at 4 43 10 PM" src="https://user-images.githubusercontent.com/40518788/168915233-36dcd517-691d-42a7-8fa6-56221f4d23bb.png">
 
 <img width="1439" alt="Screen Shot 2022-05-17 at 4 44 15 PM" src="https://user-images.githubusercontent.com/40518788/168915244-14b9b56e-72e0-4669-9306-f6da65423147.png">
+
+![Capture](https://user-images.githubusercontent.com/40518788/172069230-4452c31f-bdb6-43f8-9cf1-04d38711579d.PNG)
+
+![Capture2](https://user-images.githubusercontent.com/40518788/172069234-55ff359f-dd3f-46ee-b90b-831900ec4275.PNG)
 
